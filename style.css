@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* Global Variable */
+/*#ef2006; */
+:root {
+    --main: #c59203;
+    --black: #000;
+    --white: #fff;
+    --font-family: "Andada Pro", serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-decoration: none !important; */
+    font-family: var(--font-family);
+    transition: 0.4s;
+}
+*::selection {
+    background: var(--main);
+    color: var(--white) !important;
+}
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background: #333;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main);
+}
+.content {
+    text-align: center;
+    margin: 70px auto;
+}
+.content h6 {
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main);
+    z-index: 11;
+}
+.content i {
+    font-size: 150px;
+    opacity: 0.7;
+    z-index: -1 !important;
+    margin-top: -100px;
+    color: var(--main) !important;
+}
+.content span {
+    font-weight: 600;
+    font-size: 30px;
+    z-index: 11;
+}
+
+/* navbar section start */
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .active {
+    background: var(--main);
+    border-radius: 15px;
+}
+.navbar.scroll {
+    background: var(--black);
+    padding: 10px;
+}
+.navbar-brand {
+    font-weight: 600;
+    padding: 0px 80px;
+    font-size: 2em;
+    color: var(--white) !important;
+    font-family: var(--font-family);
+}
+.navbar-brand span {
+    font-weight: 900;
+    font-size: 1.7em;
+    color: var(--main) !important;
+}
+.navbar-nav{
+    padding: 0px 80px;
+    margin-top: 20px;
+}
+.nav-link {
+    font-weight: 500;
+    color: var(--white) !important;
+    margin-left: 4px;
+    transition: 0.4s;
+}
+.nav-link::before{
+    content: "";
+    background: var(--main);
+    height: 2px;
+    width: 0px;
+    display: block;
+    position: absolute;
+    transition: 0.4s;
+}
+.nav-link:hover::before{
+    width: 40px;
+}
+.nav-link:hover{
+    color: var(--main) !important;
+}
+
+/* navbar section end */
+
+/* header section start */
+.header {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.header .vid-parent {
+    position: relative;
+}
+.header video{
+    height: 100%;
+    width: 100%;
+}
+.header .vid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--black);
+    opacity: 0.5;
+}
+.header .vid-content {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    background: var(--black);
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+}
+.header .vid-content h6 {
+    font-weight: bold;
+    font-size: 2.2em;
+}
+.header .vid-content h6 span {
+    font-weight: 800;
+    font-size: 1.5em;
+    color: var(--main);
+}
+.header .vid-content .btn {
+    width: 300px;
+    border: 1px solid --main;
+    border-radius: 15px;
+    color: var(--main) !important;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.header .vid-content .btn:hover{
+    background: var(--main) !important;
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+/* header section end */
+
+/* about section start */
+.about {
+    margin: 200px auto;
+}
+.about .col-sm-5 h6 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.about .col-sm-5 h6 span {
+    font-weight: 800;
+    font-size: 45px;
+    color: var(--main);
+}
+.about .col-sm-5 .btn {
+    width: 300px;
+    border: 1px solid var(--main);
+    color: var(--main) !important;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.about .col-sm-5 .btn:hover{
+    background: var(--main) !important;
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+.about .custom{
+    margin-top: 40px;
+}
+.about .col-sm-5 img{
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.about .col-sm-5 img:hover{
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+/* about section end */
+
+/* courses section start */
+.courses{
+    margin-bottom: 200px;
+}
+.courses .box {
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.4), inset 10px 10px 10px -10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 80px;
+}
+.courses .box:hover {
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.2), inset 10px 10px 10px -10px rgba(0, 0, 0, 9);
+}
+.courses .box .box_content {
+    text-align: center;
+}
+.courses .box .box_content h6 {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px auto;
+}
+.courses .box .box_content i{
+    font-size: 40px;
+    margin: 5px auto !important;
+    color: var(--main) !important;
+}
+.courses .box .box_content .btn {
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid var(--main);
+    color: var(--main) !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+.courses .box .box_content .btn:hover {
+    background: var(--main);
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+/* courses section end */
+
+/* Alumini Section start */
+.alumini{
+    margin-bottom: 200px;
+}
+.alumini img {
+    height: 450px;
+    object-fit: cover;
+    cursor: pointer;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.alumini img:hover {
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.alumini .col-sm-5 h5 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #3498db;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.alumini .col-sm-5 h5:hover{
+    text-decoration: underline !important;
+}
+.alumini .col-sm-5 .btn{
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid var(--main);
+    color: var(--main) !important;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.alumini .col-sm-5 .btn:hover{
+    background: var(--main);
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+.alumini .second {
+    margin-top: 100px;
+}
+/* Alumini Section end */
+
+/* testimonial start */
+.testi{
+    margin-bottom: 200px;
+}
+.testi .box{
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.4), inset 10px 10px 10px -10px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    cursor: pointer;
+}
+.testi .box:hover {
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    background: #ccc;
+}
+.testi .box h6 {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px auto;
+}
+.testi .box i {
+    font-size: 30px;
+    color: var(--main);
+    margin-bottom: 5px;
+}
+.testi img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.testi .mid{
+    margin-top: 80px;
+}
+/* testimonial end */
+
+/* Footer Section Start */
+footer {
+    background: var(--black);
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    font-weight: bold;
+    text-decoration: none !important;
+    color: var(--white) !important;
+}
+/* Footer Section end */
+
+/* =============== about page start =============== */
+/* about header section start */
+.about_header {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.about_header img {
+    height: 70vh;
+    object-fit: cover;
+    width: 100%;
+}
+.about_header .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 100%;
+    background: var(--black);
+    opacity: 0.5;
+}
+.about_header .img-content {
+    position: absolute;
+    top: 99%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 20px;
+}
+.about_header .img-content h6 {
+    font-size: 5em;
+    font-weight: bold;
+}
+/* about header section end */
+
+/* about main section start */
+.about_main {
+    margin: 200px auto;
+}
+.about_main .col-sm-5 h6 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.about_main .col-sm-5 h6 span {
+    font-size: 45px;
+    color: var(--main) !important;
+    font-weight: 800;
+}
+.about_main .col-sm-5 img {
+    height: 400px;
+    cursor: pointer;
+    object-fit: cover;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.about_main .col-sm-5 p {
+    margin-top: 30px;
+}
+.about_main .btn{
+    border: 1px solid var(--main);
+    border-radius: 15px;
+    color: var(--main) !important;
+    width: 300px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+.about_main .btn:hover {
+    background: var(--main);
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+/* about main section end */
+/* =============== about page end =============== */
+
+/* =============== infra page start =============== */
+/* infra header section start */
+.infra_header {
+    position: relative;
+}
+.infra_header .img-parent {
+    position: relative;
+}
+.infra_header img {
+    height: 70vh;
+    object-fit: cover;
+    width: 100%;
+}
+.infra_header .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 100%;
+    background: var(--black);
+    opacity: 0.4;
+}
+.infra_header .img-content {
+    position: absolute;
+    top: 99%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 20px;
+}
+.infra_header .img-content h6 {
+    font-size: 5em;
+    font-weight: bold;
+}
+/* infra header section end */
+
+/* infra main section start */
+.infra_main{
+    margin: 200px auto;
+}
+.infra_main .btn {
+    border: 1px solid var(--main);
+    color: var(--main) !important;
+    font-weight: bold;
+    width: 300px;
+    margin: 30px auto;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.infra_main .btn:hover {
+    background: var(--main) !important;
+    color: var(--white) !important;
+    letter-spacing: 4px;
+}
+/* infra main section end */
+
+/*  hostel page start */
+.hostel_main {
+    margin: 200px auto;
+}
+.hostel_main .col-sm-5 img {
+    height: 500px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.hostel_main .col-sm-5 h6 {
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main) !important;
+}
+.hostel_main p {
+    margin: 20px auto;
+}
+.hostel_main .btn {
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid var(--main);
+    font-weight: bold;
+    color: var(--main) !important;
+    transition: 0.3s;
+}
+.hostel_main .btn:hover {
+    background: var(--main) !important;
+    letter-spacing: 3px;
+    color: var(--white) !important;
+}
+.hostel_main .row{
+    margin-bottom: 100px;
+}
+.hostel_main .col-sm-3 img {
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+.hostel_main .col-sm-3 img:hover {
+    transform: scale(1.04);
+}
+/*  hostel page end */
+
+/* =============== infra page end =============== */
+
+/* =========== faculty page start ============= */
+.faculty_header {
+    position: relative;
+}
+.faculty_header .img-parent {
+    position: relative;
+}
+.faculty_header img {
+    height: 70vh;
+    object-fit: cover;
+    width: 100%;
+}
+.faculty_header .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 100%;
+    background: var(--black);
+    opacity: 0.4;
+}
+.faculty_header .img-content {
+    position: absolute;
+    top: 99%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 20px;
+}
+.faculty_header .img-content h6 {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.faculty_main{
+    margin: 200px auto;
+}
+.faculty_main .col-sm-5 h6 {
+    color: var(--main) !important;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px !important;
+    cursor: pointer;
+}
+.faculty_main .col-sm-5 h6:hover{
+    text-decoration: underline !important;
+}
+.faculty_main .row {
+    margin-bottom: 100px !important;
+}
+.faculty_main .col-sm-5 img {
+    height: 400px;
+    width: 450px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.faculty_main .col-sm-5 img:hover {
+    transform: scale(1.03);
+}
+.faculty_main .col-sm-5 span {
+    margin: 20px auto;
+}
+
+/* =========== faculty page end ============= */
+
+/* Main Course Page */
+.main_course_page{
+    margin: 156px auto;
+}
+.main_course_page .col-sm-5 p {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main) !important;
+}
+.main_course_page .col-sm-5 p:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+.main_course_page .fas {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--main) !important;
+}
+.main_course_page img {
+    height: 450px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.main_course_page img:hover {
+    transform: scale(1.02);
+}
+.main_course_page .btn{
+    width: 300px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid var(--main);
+    color: var(--main) !important;
+    margin: 10px auto;
+    transition: 0.4s;
+}
+.main_course_page .btn:hover {
+    background-color: var(--main) !important;
+    color: var(--white) !important;
+    letter-spacing: 3px;
+}
+
+/* For  tablet large devices */
+@media screen and (min-width: 899px) and (max-width: 1024px){
+    .navbar {
+        padding: 6px;
+    }
+    .navbar-brand {
+        padding: 0px 25px;
+    }
+    .navbar-nav {
+        padding: 0px 10px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    .navbar.scroll {
+        background: #504e4edb;
+        padding: 6px;
+    }
+    .header .vid-content {
+        left: 30%
+    }
+    .header .vid-content h6 {
+        font-size: 1.8em;
+    }
+    .header .vid-content .btn {
+        width: 250px;
+    }
+    .about {
+        margin: 150px auto;
+    }
+    .content h6 {
+        font-size: 45px;
+    }
+    .content i {
+        font-size: 140px;
+    }
+    .about .col-sm-5 h6 {
+        font-size: 35px;
+    }
+    .about .col-sm-5 h6 span {
+        font-size: 40px;
+    }
+    .about .custom {
+        margin-top: 25px;
+    }
+    .courses .box .box_content i {
+        font-size: 35px;
+    }
+    .courses .box .box_content .btn {
+        width: 180px;
+    }
+    .courses {
+        margin-bottom: 150px;
+    }
+    .about_header .img-content {
+        left: 17%;
+    }
+    .infra_header .img-content h6 {
+        font-size: 4em;
+    }
+    .infra_header .img-content {
+        left: 22%;
+    }
+    .faculty_header .img-content {
+        left: 19%;
+    }
+    .faculty_header .img-content h6 {
+        font-size: 4em;
+    }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 899px){
+    .navbar {
+        padding: 0;
+      /*  display: flex;
+        flex-direction: column;
+        justify-content: space-between;*/
+        font-size: 15px;
+    }
+    .navbar-brand {
+        padding: 0px 25px;
+        font-size: 1.8em;
+    }
+    .navbar-nav {
+        padding: 0;
+    }
+    .navbar.scroll {
+        padding: 2px;
+        display: flex;
+        font-size: 15px;
+        flex-direction: row;
+    }
+    .header .vid-content {
+        top: 95%;
+    }
+    .header .vid-content h6 {
+        font-size: 1em;
+    }
+    .header .vid-content .btn {
+        width: 180px;
+        font-size: 12px;
+    }
+    .content i {
+        font-size: 120px;
+    }
+    .content h6 {
+        font-size: 45px;
+    }
+    .content span {
+        font-size: 25px;
+    }
+    .about {
+        margin: 100px auto;
+    }
+    .about .custom {
+        font-size: 10px;
+    }
+    .about .col-sm-5 h6 {
+        font-size: 25px;
+    }
+    .about .col-sm-5 h6 span {
+        font-size: 30px;
+    }
+    .about .col-sm-5 img {
+        height: 300px;
+    }
+    .about .col-sm-5 .btn {
+        width: 200px;
+    }
+    .courses .box .box_content h6 {
+        font-size: 15px;
+    }
+    .courses .box .box_content i {
+        font-size: 20px;
+    }
+    .courses .box .box_content p {
+        font-size: 12px;
+    }
+    .courses .box .box_content .btn {
+        width: 135px;
+        font-size: 12px;
+    }
+    .courses {
+        margin-bottom: 100px;
+    }
+    .alumini .col-sm-5 h5 {
+        font-size: 20px;
+    }
+    .alumini .col-sm-5 p {
+        font-size: 12px;
+    }
+    .alumini .col-sm-5 .btn {
+        width: 200px;
+        font-size: 15px;
+    } 
+    .testi img {
+        height: 120px;
+        width: 120px;
+    }
+    .testi .box i {
+        font-size: 20px;
+    }
+    .testi .box h6 {
+        font-size: 15px;
+    }
+    .testi .box p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .navbar-brand {
+        font-weight: 600;
+        padding: 0px 25px;
+        font-size: 1.5em;
+    }
+   .navbar {
+        padding: 5px;
+    } 
+    .header {
+        margin-top: 85px;
+    }
+    .header .vid-content h6 {
+        font-size: 1em;
+    }  
+    .header .vid-content h6 span {
+        font-size: 1.4em;
+    }
+    .header .vid-content .btn {
+        width: 180px;
+        font-size: 12px;
+    }
+    .header .vid-content {
+        top: 105%;
+        left: 35%;
+        padding: 15px;
+    }
+    .content {
+        margin: 50px auto;
+    }
+    .content h6 {
+        font-size: 40px;
+    }
+    .content span {
+        font-size: 25px;
+    }
+    .content i {
+        font-size: 120px;
+    }
+    .about .col-sm-5 h6 {
+        font-size: 25px;
+    }
+    .about .col-sm-5 h6 span {
+        font-size: 35px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .about .col-sm-5 .btn {
+        width: 200px;
+    }
+    .about .col-sm-5 img {
+        height: 350px;
+        margin-top: 15px;
+    }
+    .about {
+        margin: 150px auto;
+    }
+    .courses .box .box_content i {
+        font-size: 30px;
+    }
+    .courses {
+        margin-bottom: 100px;
+    }
+    .alumini img {
+        height: 350px;
+    }
+    .alumini .col-sm-5 .btn {
+        width: 250px;
+    }
+    .alumini .second {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .alumini {
+        margin-bottom: 110px;
+    }
+    .testi .mid {
+        margin-bottom: 80px;
+    }
+    footer a {
+        font-size: 12px;
+    }
+}
+
